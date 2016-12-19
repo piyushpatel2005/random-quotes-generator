@@ -1,0 +1,76 @@
+
+body {
+  background: purple;
+}
+
+.main-content {
+  margin-top: 60px;
+  background: white;
+  border-radius: 20px;
+  padding-left: 25px;
+}
+blockquote {
+  font-size: 3rem;
+  margin-top: 2S%;
+  border-left: 0;
+  vertical-align: middle;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ccc;
+}
+
+blockquote {
+  height: 40vh;
+  width: 800px;
+  max-width: 800px;
+  color: purple;
+}
+
+blockquote p:before {
+  content: "\201C";
+  font-size: 5rem;
+}
+
+.twitter {
+  margin: 1%;
+  background: purple;
+  border: 1px solid purple;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.twitter div {
+  font-size: 300%;
+  margin: 5px 0 0 -3px;
+}
+
+.new-quote {
+  background: purple;
+  color: #fff;
+}
+
+.new-quote:hover {
+  color: #ccc;
+  opacity: 0.7;
+  box-shadow: 2px 2px 5px #777;
+}
+
+footer {
+  margin-top: auto;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 2rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
