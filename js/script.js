@@ -2,7 +2,7 @@ var quote = $("blockquote p");
 var author= $("blockquote footer");
 
 function getNewQuote() {
-    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json&json=?", function (data) {
+    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function (data) {
     quote.text(data['quoteText']);
     author.text(data['quoteAuthor']);
     getTweet();
@@ -24,7 +24,7 @@ $(document).ready(function () {
   getNewQuote();
 
   $(".new-quote").click(function () {
-    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json&json=?", function (data) {
+    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function (data) {
       getNewQuote();
       var green = Math.round(Math.random() * 150);
       var red = Math.round(Math.random() * 255);
