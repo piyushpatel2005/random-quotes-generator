@@ -30,19 +30,39 @@ $(document).ready(function () {
       var red = Math.round(Math.random() * 255);
       var blue = Math.round(Math.random() * 255);
       var newColor = "rgb(" + red + ", " + green + ", " + blue + ")";
-      $("body").css("background", newColor);
-      $(".dynamic").css("color", newColor);
-      $("blockquote footer").css({"color": newColor,
-                                  "opacity": 0.7
-                                });
-      $(".twitter").css({
-                      "background": newColor,
-                      "border-color": newColor
-                    });
-      $(".new-quote").css(
-        {"background": newColor,
-        "color": "#fff"
-        });
+      var oldColor = $("body").css("background-color");
+
+      $("body").
+      fadeOut(500, function () {
+        $(this).css("background", oldColor);
+        $(".dynamic").css("color", oldColor);
+        $("blockquote footer").css({"color": oldColor,
+                                    "opacity": 0.7
+                                  });
+        $(".twitter").css({
+                        "background": oldColor,
+                        "border-color": oldColor
+                      });
+        $(".new-quote").css({
+                          "background": oldColor,
+                          "color" : "#fff"
+                        });
+      })
+      .fadeIn(500, function () {
+        $(this).css("background", newColor);
+        $(".dynamic").css("color", newColor);
+        $("blockquote footer").css({"color": newColor,
+                                    "opacity": 0.7
+                                  });
+        $(".twitter").css({
+                        "background": newColor,
+                        "border-color": newColor
+                      });
+        $(".new-quote").css({
+                        "background": newColor,
+                        "color" : "#fff"
+                      });
+      });
+    });
   });
-});
 });
